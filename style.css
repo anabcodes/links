@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: clamp(1.2rem, 1.5vw, 3rem);
+    font-family: "Nunito", sans-serif
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+:root {
+    --rosa: #ae0464;
+    --azul: #1d52a8;
+    --roxo: #71056f;
+    --verde: #1fe516;
+    --preto: #191919;
+    --branco: #e7e8dc;
+}
+
+body{
+    /* grid-template-columns: repeat(auto-fit, minmax(700px, 1fr)); */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--branco);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_links{
+    margin: 2rem;
+    width: calc(100% - 4rem);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.sobre{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 12 / 9;
+    display: flex;
+    gap: 1rem;
+}
+
+.container_habilidades{
+    /* background-color: green; */
+    width: 14%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container_habilidades .icone_decorativo{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: url(./imgs/icone_lua.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container_habilidades .habilidades{
+    flex: 1;
+    background: url(./imgs/estampa_habilidades.png);
+    border-radius: 100px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.img_profissional{
+    width: calc(79% - 1rem);
+    background: url(./imgs/eu_foto.jpg);
+    border-radius: 2.5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img_profissional .icone_decorativo{
+    position: absolute;
+    width: 14%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    background: url(./imgs/icone_estrela.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 0 1rem var(--branco)
+}
+
+.img_profissional .icone_decorativo::before{
+    content: '';
+    background-color: transparent;
+    width: 0.5em;
+    aspect-ratio: 1 / 1;
+    z-index: 100;
+    position: absolute;
+    bottom: calc(-1rem - 0.45em);
+    left: calc(50% - 0.5em);
+    border-radius: 50%;
+    box-shadow: 0.6rem -0.6rem 0 var(--branco);
+}
+
+.img_profissional .icone_decorativo::after{
+    content: '';
+    background-color: transparent;
+    width: 0.5em;
+    aspect-ratio: 1 / 1;
+    z-index: 100;
+    position: absolute;
+    top: calc(-1rem - 0.45em);
+    left: calc(50% - 0.5em);
+    border-radius: 50%;
+    box-shadow: 0.6rem 0.6rem 0 var(--branco);
+}
+
+.img_profissional h1{
+    position: absolute;
+    padding: 1rem 1.5rem;
+    background-color: var(--verde);
+    border-radius: 30px 30px 0 0;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0%;
+    font-size: clamp(2rem, 3vw, 3rem);
+    box-shadow: 0 0 0 1rem var(--branco);
+}
+
+.img_profissional h1::before{
+    content: '';
+    background-color: transparent;
+    width: 0.5em;
+    aspect-ratio: 1 / 1;
+    z-index: 100;
+    position: absolute;
+    bottom: 0em;
+    left: calc(-1rem - 0.47em);
+    border-radius: 50%;
+    box-shadow: 0.6rem 0.6rem 0 var(--branco);
+}
+
+.img_profissional h1::after{
+    content: '';
+    background-color: transparent;
+    width: 0.5em;
+    aspect-ratio: 1 / 1;
+    z-index: 100;
+    position: absolute;
+    bottom: 0;
+    right: calc(-1rem - 0.47em);
+    border-radius: 50%;
+    box-shadow: -0.6rem 0.6rem 0 var(--branco);
+}
+
+
+
+.blocos_links{
+    margin-top: 4em;
+    background-color: rgb(0, 255, 34);
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a .img_link{
+    margin-top: 1rem;
+    width: 100%;
+    aspect-ratio: 12 / 4;
+    border-radius: 20px;
+    background-color: var(--preto);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a .img_link p{
+    color: var(--verde);
+    padding: 1em;
+    background-color: var(--preto);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px);
+    font-weight: bold;
+    transition: 1s;
+}
+
+a .img_link p:hover{
+    transform: scale(1.05);
+}
+
+#link1{
+    background-image: url(./imgs/estampa_link_1.png);
+}
+
+#link2{
+    background-image: url(./imgs/estampa_link_2.png);
+}
+
+.links{
+    position: relative;
+}
+
+.redes_sociais{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--preto);
+    width: max-content;
+    border-radius: 100px;
+    align-self: center;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.redes_sociais a img{
+    margin-top: 1rem;
+    margin-right: 1rem;
+    width: clamp(1rem, 10vw, 10rem);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.redes_sociais a img:first-of-type{
+    margin-left: 1rem;
+}
+.redes_sociais a img:last-of-type {
+    margin-right: 1rem;
+}
+
+.box_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.cont_form{
+    background: url(./imgs/img_paisagem.png);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+
+.cont_form form{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 4rem);
+    max-width: 700px;
+    margin: 2em 0em;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px); 
+    padding: 3em;
+    border-radius: 20px;
+}
+
+.cont_form form p{
+    font-weight: bold;
+    align-self: center;
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.cont_form form input, textarea, select{
+    margin-top: 1rem;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    outline: none;
+    border-radius: 30px;
+    padding: 1rem;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    resize: none;
+}
+
+select option{
+    background-color: var(--preto); /* Torna o fundo transparente */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6)
+}
+textarea{
+    height: 10em;
+}
+
+
+
+.cont_form form button{
+    margin-top: 1rem;
+    width:min-content;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    align-self: center;
+    border: none;
+    color: var(--preto);
+    font-weight: bold;
+}
+
+span{
+    background-color: var(--preto);
+    padding: 2em;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+
+@media (min-width: 1100px) {
+
+    .container_links{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .sobre{
+        width: 50%;
+    }
+
+    .links{
+        width: 50%;
+    }
+
+}
